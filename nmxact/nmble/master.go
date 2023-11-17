@@ -25,7 +25,7 @@ import (
 
 	log "github.com/sirupsen/logrus"
 
-	"mynewt.apache.org/newtmgr/nmxact/nmxutil"
+	"github.com/comap-smart-home/mynewt-newtmgr/nmxact/nmxutil"
 )
 
 type masterState int
@@ -68,11 +68,12 @@ type Preemptable interface {
 //
 // This struct restricts master privileges to a single client at a time.  It
 // uses the following procedure to determine which of several clients to serve:
-//     If there is one or more waiting primaries:
-//         If a secondary is active, preempt it.
-//         Service the primaries in the order of their requests.
-//     Else (no waiting primaries):
-//         Service waiting secondary if there is one.
+//
+//	If there is one or more waiting primaries:
+//	    If a secondary is active, preempt it.
+//	    Service the primaries in the order of their requests.
+//	Else (no waiting primaries):
+//	    Service waiting secondary if there is one.
 type Master struct {
 	primaries        []primary
 	secondary        Preemptable

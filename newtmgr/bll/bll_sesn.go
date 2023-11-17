@@ -1,3 +1,4 @@
+//go:build !windows
 // +build !windows
 
 /**
@@ -31,15 +32,15 @@ import (
 	log "github.com/sirupsen/logrus"
 	"golang.org/x/net/context"
 
+	"github.com/comap-smart-home/mynewt-newtmgr/newtmgr/nmutil"
+	"github.com/comap-smart-home/mynewt-newtmgr/nmxact/bledefs"
+	"github.com/comap-smart-home/mynewt-newtmgr/nmxact/mgmt"
+	"github.com/comap-smart-home/mynewt-newtmgr/nmxact/nmble"
+	"github.com/comap-smart-home/mynewt-newtmgr/nmxact/nmcoap"
+	"github.com/comap-smart-home/mynewt-newtmgr/nmxact/nmp"
+	"github.com/comap-smart-home/mynewt-newtmgr/nmxact/nmxutil"
+	"github.com/comap-smart-home/mynewt-newtmgr/nmxact/sesn"
 	"mynewt.apache.org/newt/util"
-	"mynewt.apache.org/newtmgr/newtmgr/nmutil"
-	"mynewt.apache.org/newtmgr/nmxact/bledefs"
-	"mynewt.apache.org/newtmgr/nmxact/mgmt"
-	"mynewt.apache.org/newtmgr/nmxact/nmble"
-	"mynewt.apache.org/newtmgr/nmxact/nmcoap"
-	"mynewt.apache.org/newtmgr/nmxact/nmp"
-	"mynewt.apache.org/newtmgr/nmxact/nmxutil"
-	"mynewt.apache.org/newtmgr/nmxact/sesn"
 )
 
 // A session that uses the host machine's native BLE support.
@@ -268,8 +269,9 @@ func (s *BllSesn) exchangeMtu() error {
 }
 
 // @return bool                 Whether to retry the open attempt; false
-//                                  on success.
-//         error                The cause of a failed open; nil on success.
+//
+//	                         on success.
+//	error                The cause of a failed open; nil on success.
 func (s *BllSesn) openOnce() (bool, error) {
 	if s.IsOpen() {
 		return false, nmxutil.NewSesnAlreadyOpenError(
@@ -369,9 +371,9 @@ func (s *BllSesn) RxCoap(opt sesn.TxOptions) (coap.Message, error) {
 
 // Performs a blocking transmit a single NMP message and listens for the
 // response.
-//     * nil: success.
-//     * nmxutil.SesnClosedError: session not open.
-//     * other error
+//   - nil: success.
+//   - nmxutil.SesnClosedError: session not open.
+//   - other error
 func (s *BllSesn) TxRxMgmt(m *nmp.NmpMsg,
 	timeout time.Duration) (nmp.NmpRsp, error) {
 

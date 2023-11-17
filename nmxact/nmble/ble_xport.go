@@ -27,11 +27,11 @@ import (
 
 	log "github.com/sirupsen/logrus"
 
+	. "github.com/comap-smart-home/mynewt-newtmgr/nmxact/bledefs"
+	"github.com/comap-smart-home/mynewt-newtmgr/nmxact/nmxutil"
+	"github.com/comap-smart-home/mynewt-newtmgr/nmxact/sesn"
+	"github.com/comap-smart-home/mynewt-newtmgr/nmxact/task"
 	"mynewt.apache.org/newt/util/unixchild"
-	. "mynewt.apache.org/newtmgr/nmxact/bledefs"
-	"mynewt.apache.org/newtmgr/nmxact/nmxutil"
-	"mynewt.apache.org/newtmgr/nmxact/sesn"
-	"mynewt.apache.org/newtmgr/nmxact/task"
 )
 
 type XportCfg struct {

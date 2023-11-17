@@ -25,18 +25,18 @@ import (
 
 	pb "gopkg.in/cheggaaa/pb.v1"
 
+	"github.com/comap-smart-home/mynewt-newtmgr/nmxact/mgmt"
+	"github.com/comap-smart-home/mynewt-newtmgr/nmxact/nmp"
+	"github.com/comap-smart-home/mynewt-newtmgr/nmxact/nmxutil"
+	"github.com/comap-smart-home/mynewt-newtmgr/nmxact/sesn"
 	log "github.com/sirupsen/logrus"
-	"mynewt.apache.org/newtmgr/nmxact/mgmt"
-	"mynewt.apache.org/newtmgr/nmxact/nmp"
-	"mynewt.apache.org/newtmgr/nmxact/nmxutil"
-	"mynewt.apache.org/newtmgr/nmxact/sesn"
 	"sync"
 	"sync/atomic"
 )
 
-//////////////////////////////////////////////////////////////////////////////
+// ////////////////////////////////////////////////////////////////////////////
 // $upload                                                                  //
-//////////////////////////////////////////////////////////////////////////////
+// ////////////////////////////////////////////////////////////////////////////
 const IMAGE_UPLOAD_MAX_CHUNK = 512
 const IMAGE_UPLOAD_MIN_1ST_CHUNK = 32
 const IMAGE_UPLOAD_STATUS_MISSED = -1

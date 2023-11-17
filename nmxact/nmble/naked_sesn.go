@@ -27,14 +27,14 @@ import (
 	"github.com/runtimeco/go-coap"
 	log "github.com/sirupsen/logrus"
 
+	. "github.com/comap-smart-home/mynewt-newtmgr/nmxact/bledefs"
+	"github.com/comap-smart-home/mynewt-newtmgr/nmxact/mgmt"
+	"github.com/comap-smart-home/mynewt-newtmgr/nmxact/nmcoap"
+	"github.com/comap-smart-home/mynewt-newtmgr/nmxact/nmp"
+	"github.com/comap-smart-home/mynewt-newtmgr/nmxact/nmxutil"
+	"github.com/comap-smart-home/mynewt-newtmgr/nmxact/sesn"
+	"github.com/comap-smart-home/mynewt-newtmgr/nmxact/task"
 	"mynewt.apache.org/newt/util"
-	. "mynewt.apache.org/newtmgr/nmxact/bledefs"
-	"mynewt.apache.org/newtmgr/nmxact/mgmt"
-	"mynewt.apache.org/newtmgr/nmxact/nmcoap"
-	"mynewt.apache.org/newtmgr/nmxact/nmp"
-	"mynewt.apache.org/newtmgr/nmxact/nmxutil"
-	"mynewt.apache.org/newtmgr/nmxact/sesn"
-	"mynewt.apache.org/newtmgr/nmxact/task"
 )
 
 type NakedSesnState int

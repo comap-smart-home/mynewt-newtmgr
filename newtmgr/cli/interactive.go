@@ -26,15 +26,15 @@ import (
 	"strings"
 	"sync"
 
+	"github.com/abiosoft/ishell/v2"
+	"github.com/comap-smart-home/mynewt-newtmgr/newtmgr/nmutil"
+	"github.com/comap-smart-home/mynewt-newtmgr/nmxact/nmcoap"
+	"github.com/comap-smart-home/mynewt-newtmgr/nmxact/nmxutil"
+	"github.com/comap-smart-home/mynewt-newtmgr/nmxact/sesn"
+	"github.com/comap-smart-home/mynewt-newtmgr/nmxact/xact"
 	"github.com/runtimeco/go-coap"
 	"github.com/spf13/cast"
 	"github.com/spf13/cobra"
-	"github.com/abiosoft/ishell/v2"
-	"mynewt.apache.org/newtmgr/newtmgr/nmutil"
-	"mynewt.apache.org/newtmgr/nmxact/nmcoap"
-	"mynewt.apache.org/newtmgr/nmxact/nmxutil"
-	"mynewt.apache.org/newtmgr/nmxact/sesn"
-	"mynewt.apache.org/newtmgr/nmxact/xact"
 )
 
 var ObserverId int

@@ -25,9 +25,9 @@ import (
 	"strings"
 	"time"
 
+	"github.com/comap-smart-home/mynewt-newtmgr/newtmgr/nmutil"
+	"github.com/comap-smart-home/mynewt-newtmgr/nmxact/nmserial"
 	"mynewt.apache.org/newt/util"
-	"mynewt.apache.org/newtmgr/newtmgr/nmutil"
-	"mynewt.apache.org/newtmgr/nmxact/nmserial"
 )
 
 func einvalSerialConnString(f string, args ...interface{}) error {

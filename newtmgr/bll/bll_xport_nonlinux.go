@@ -1,3 +1,4 @@
+//go:build !linux
 // +build !linux
 
 /**
@@ -24,7 +25,7 @@ package bll
 import (
 	"github.com/JuulLabs-OSS/ble"
 
-	"mynewt.apache.org/newtmgr/nmxact/bledefs"
+	"github.com/comap-smart-home/mynewt-newtmgr/nmxact/bledefs"
 )
 
 // macOS (CoreBluetooth) does not allow the connection parameters to be

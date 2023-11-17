@@ -1,3 +1,4 @@
+//go:build windows
 // +build windows
 
 /**
@@ -24,9 +25,9 @@ package config
 import (
 	"fmt"
 
+	"github.com/comap-smart-home/mynewt-newtmgr/newtmgr/bll"
+	"github.com/comap-smart-home/mynewt-newtmgr/nmxact/bledefs"
 	"mynewt.apache.org/newt/util"
-	"mynewt.apache.org/newtmgr/newtmgr/bll"
-	"mynewt.apache.org/newtmgr/nmxact/bledefs"
 )
 
 type BllConfig struct {
@@ -34,7 +35,7 @@ type BllConfig struct {
 	OwnAddrType bledefs.BleAddrType
 	PeerId      string
 	PeerName    string
-	HciIdx	    int
+	HciIdx      int
 }
 
 func NewBllConfig() *BllConfig {

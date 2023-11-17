@@ -20,8 +20,8 @@
 package xact
 
 import (
-	"mynewt.apache.org/newtmgr/nmxact/nmp"
-	"mynewt.apache.org/newtmgr/nmxact/sesn"
+	"github.com/comap-smart-home/mynewt-newtmgr/nmxact/nmp"
+	"github.com/comap-smart-home/mynewt-newtmgr/nmxact/sesn"
 )
 
 type ShellExecCmd struct {

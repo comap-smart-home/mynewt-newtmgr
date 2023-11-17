@@ -24,10 +24,10 @@ import (
 	"os"
 	"time"
 
-	"mynewt.apache.org/newtmgr/nmxact/bledefs"
-	"mynewt.apache.org/newtmgr/nmxact/nmble"
-	"mynewt.apache.org/newtmgr/nmxact/sesn"
-	"mynewt.apache.org/newtmgr/nmxact/xact"
+	"github.com/comap-smart-home/mynewt-newtmgr/nmxact/bledefs"
+	"github.com/comap-smart-home/mynewt-newtmgr/nmxact/nmble"
+	"github.com/comap-smart-home/mynewt-newtmgr/nmxact/sesn"
+	"github.com/comap-smart-home/mynewt-newtmgr/nmxact/xact"
 )
 
 func main() {

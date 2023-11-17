@@ -22,9 +22,9 @@ package sesn
 import (
 	"time"
 
-	"mynewt.apache.org/newtmgr/nmxact/bledefs"
-	"mynewt.apache.org/newtmgr/nmxact/lora"
-	"mynewt.apache.org/newtmgr/nmxact/nmcoap"
+	"github.com/comap-smart-home/mynewt-newtmgr/nmxact/bledefs"
+	"github.com/comap-smart-home/mynewt-newtmgr/nmxact/lora"
+	"github.com/comap-smart-home/mynewt-newtmgr/nmxact/nmcoap"
 )
 
 type MgmtProto int

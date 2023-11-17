@@ -25,9 +25,9 @@ import (
 
 	"github.com/spf13/cobra"
 
+	"github.com/comap-smart-home/mynewt-newtmgr/newtmgr/nmutil"
+	"github.com/comap-smart-home/mynewt-newtmgr/nmxact/xact"
 	"mynewt.apache.org/newt/util"
-	"mynewt.apache.org/newtmgr/newtmgr/nmutil"
-	"mynewt.apache.org/newtmgr/nmxact/xact"
 )
 
 func mempoolStatRunCmd(cmd *cobra.Command, args []string) {

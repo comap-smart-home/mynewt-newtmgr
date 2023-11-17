@@ -1,3 +1,4 @@
+//go:build linux
 // +build linux
 
 /**
@@ -26,8 +27,8 @@ import (
 	"github.com/JuulLabs-OSS/ble/linux"
 	"github.com/JuulLabs-OSS/ble/linux/hci/cmd"
 
+	"github.com/comap-smart-home/mynewt-newtmgr/nmxact/bledefs"
 	"mynewt.apache.org/newt/util"
-	"mynewt.apache.org/newtmgr/nmxact/bledefs"
 )
 
 func BllXportSetConnParams(dev ble.Device, ownAddrType bledefs.BleAddrType) error {

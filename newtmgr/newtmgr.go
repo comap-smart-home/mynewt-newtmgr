@@ -25,11 +25,11 @@ import (
 	"os/signal"
 	"syscall"
 
+	"github.com/comap-smart-home/mynewt-newtmgr/newtmgr/cli"
+	"github.com/comap-smart-home/mynewt-newtmgr/newtmgr/config"
+	"github.com/comap-smart-home/mynewt-newtmgr/newtmgr/nmutil"
+	"github.com/comap-smart-home/mynewt-newtmgr/nmxact/nmserial"
 	"mynewt.apache.org/newt/util"
-	"mynewt.apache.org/newtmgr/newtmgr/cli"
-	"mynewt.apache.org/newtmgr/newtmgr/config"
-	"mynewt.apache.org/newtmgr/newtmgr/nmutil"
-	"mynewt.apache.org/newtmgr/nmxact/nmserial"
 )
 
 func isSerial() bool {

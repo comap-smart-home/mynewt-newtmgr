@@ -1,3 +1,4 @@
+//go:build !windows
 // +build !windows
 
 /**
@@ -26,8 +27,8 @@ import (
 
 	"github.com/JuulLabs-OSS/ble"
 	"github.com/JuulLabs-OSS/ble/examples/lib/dev"
-	"mynewt.apache.org/newtmgr/nmxact/bledefs"
-	"mynewt.apache.org/newtmgr/nmxact/sesn"
+	"github.com/comap-smart-home/mynewt-newtmgr/nmxact/bledefs"
+	"github.com/comap-smart-home/mynewt-newtmgr/nmxact/sesn"
 )
 
 type XportCfg struct {

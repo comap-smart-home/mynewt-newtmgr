@@ -23,7 +23,7 @@ import (
 	"fmt"
 	"time"
 
-	"mynewt.apache.org/newtmgr/nmxact/nmxutil"
+	"github.com/comap-smart-home/mynewt-newtmgr/nmxact/nmxutil"
 )
 
 type ListenerKey struct {

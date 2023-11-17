@@ -29,11 +29,11 @@ import (
 	"github.com/spf13/cobra"
 	pb "gopkg.in/cheggaaa/pb.v1"
 
+	"github.com/comap-smart-home/mynewt-newtmgr/newtmgr/core"
+	"github.com/comap-smart-home/mynewt-newtmgr/newtmgr/nmutil"
+	"github.com/comap-smart-home/mynewt-newtmgr/nmxact/nmp"
+	"github.com/comap-smart-home/mynewt-newtmgr/nmxact/xact"
 	"mynewt.apache.org/newt/util"
-	"mynewt.apache.org/newtmgr/newtmgr/core"
-	"mynewt.apache.org/newtmgr/newtmgr/nmutil"
-	"mynewt.apache.org/newtmgr/nmxact/nmp"
-	"mynewt.apache.org/newtmgr/nmxact/xact"
 )
 
 var (

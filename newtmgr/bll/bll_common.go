@@ -1,3 +1,4 @@
+//go:build !windows
 // +build !windows
 
 /**
@@ -23,14 +24,14 @@ package bll
 
 import (
 	"fmt"
-	"mynewt.apache.org/newtmgr/newtmgr/nmutil"
+	"github.com/comap-smart-home/mynewt-newtmgr/newtmgr/nmutil"
 	"runtime"
 	"time"
 
-	log "github.com/sirupsen/logrus"
 	"github.com/JuulLabs-OSS/ble"
+	log "github.com/sirupsen/logrus"
 
-	"mynewt.apache.org/newtmgr/nmxact/bledefs"
+	"github.com/comap-smart-home/mynewt-newtmgr/nmxact/bledefs"
 )
 
 func exchangeMtu(cln ble.Client, preferredMtu uint16) (uint16, error) {
