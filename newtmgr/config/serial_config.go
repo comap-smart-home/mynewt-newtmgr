@@ -23,10 +23,11 @@ import (
 	"fmt"
 	"strconv"
 	"strings"
+	"time"
 
+	"mynewt.apache.org/newt/util"
 	"mynewt.apache.org/newtmgr/newtmgr/nmutil"
 	"mynewt.apache.org/newtmgr/nmxact/nmserial"
-	"mynewt.apache.org/newt/util"
 )
 
 func einvalSerialConnString(f string, args ...interface{}) error {
@@ -67,6 +68,15 @@ func ParseSerialConnString(cs string) (*nmserial.XportCfg, error) {
 			if err != nil {
 				return sc, einvalSerialConnString("Invalid mtu: %s", v)
 			}
+
+		case "WriteDelayUs":
+			var err error
+			var delayus uint64
+			delayus, err = strconv.ParseUint(v, 10, 0)
+			if err != nil {
+				return sc, einvalSerialConnString("Invalid WriteDelayUs: %s", v)
+			}
+			sc.WriteDelay = time.Duration(delayus) * time.Microsecond
 
 		default:
 			return sc, einvalSerialConnString("Unrecognized key: %s", k)
