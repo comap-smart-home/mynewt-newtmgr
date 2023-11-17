@@ -1,4 +1,4 @@
-module mynewt.apache.org/newtmgr
+module github.com/comap-smart-home/mynewt-newtmgr
 
 go 1.12
 
